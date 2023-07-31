@@ -1,10 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:projectify/login.dart';
 import 'constraints.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'responsive.dart';
 
-class LogoScreen extends StatelessWidget {
+class LogoScreen extends StatefulWidget {
   @override
+  State<LogoScreen> createState() {
+    return _LogoScreenState();
+  }
+}
+
+class _LogoScreenState extends State<LogoScreen> {
+  @override
+  Future <void> _navigateToNextpage() async{
+    await Future.delayed(const Duration(seconds: 2));
+    Navigator.push(context,MaterialPageRoute(builder: (context) =>AuthScreen() ,) );
+
+
+  }
+  void initState() {
+    super.initState(); 
+    _navigateToNextpage();
+  }
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
