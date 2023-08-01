@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'constraints.dart';
+
 class AuthScreen extends StatefulWidget {
   @override
   State<AuthScreen> createState() {
     return _AuthScreenState();
   }
 }
-class _AuthScreenState extends State<AuthScreen>{
+
+class _AuthScreenState extends State<AuthScreen> {
   final _form = GlobalKey<FormState>();
 
   var _isLogin = true;
   var _enteredEmail = '';
   var _enteredPassword = '';
-  
-    Widget build(BuildContext context) {
+
+  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.secondary,
+      backgroundColor: bgColor,
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -38,15 +41,16 @@ class _AuthScreenState extends State<AuthScreen>{
                     child: Form(
                       key: _form,
                       child: Column(mainAxisSize: MainAxisSize.min, children: [
-                        
-
+//emailaddress text form
                         TextFormField(
-                          
+
                           decoration:
-                              const InputDecoration(labelText: 'Email Address'),
+                              const InputDecoration(labelText: 'Email Address',),
+                              
                           keyboardType: TextInputType.emailAddress,
                           autocorrect: false,
                           textCapitalization: TextCapitalization.none,
+                          
                           validator: (value) {
                             if (value == null ||
                                 value.trim().isEmpty ||
@@ -60,9 +64,11 @@ class _AuthScreenState extends State<AuthScreen>{
                             _enteredEmail = value!;
                           },
                         ),
+                        //password text form field
                         TextFormField(
                           decoration:
-                              const InputDecoration(labelText: 'Password'),
+                        
+                              const InputDecoration(labelText: 'Password',),
                           obscureText: true,
                           validator: (value) {
                             if (value == null || value.trim().length < 6) {
@@ -76,7 +82,7 @@ class _AuthScreenState extends State<AuthScreen>{
                         ),
                         const SizedBox(height: 12),
                         ElevatedButton(
-                          onPressed: (){},
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             backgroundColor:
                                 Theme.of(context).colorScheme.primaryContainer,
@@ -105,5 +111,3 @@ class _AuthScreenState extends State<AuthScreen>{
     );
   }
 }
-
-  

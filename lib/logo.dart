@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectify/login.dart';
-import 'constraints.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'responsive.dart';
 
 class LogoScreen extends StatefulWidget {
@@ -13,32 +12,24 @@ class LogoScreen extends StatefulWidget {
 
 class _LogoScreenState extends State<LogoScreen> {
   @override
-  Future <void> _navigateToNextpage() async{
-    await Future.delayed(const Duration(seconds: 2));
-    Navigator.push(context,MaterialPageRoute(builder: (context) =>AuthScreen() ,) );
-
-
-  }
   void initState() {
-    super.initState(); 
-    _navigateToNextpage();
+    super.initState();
+    _navigateToNextpage(context);
   }
+
+  Future<void> _navigateToNextpage(BuildContext context) async {
+    await Future.delayed(const Duration(seconds: 2));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => AuthScreen()));
+  }
+
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'logo',
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: bgColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.white),
-        canvasColor: secondaryColor,
-      ),
-      home: Scaffold(
+    return Scaffold(
         body: Center(
           child: LogoImage(),
         ),
-      ),
-    );
+      );
+    
   }
 }
 
