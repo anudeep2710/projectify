@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projectify/choice.dart';
 import 'package:projectify/login.dart';
 
 import 'responsive.dart';
@@ -20,7 +21,7 @@ class _LogoScreenState extends State<LogoScreen> {
   Future<void> _navigateToNextpage(BuildContext context) async {
     await Future.delayed(const Duration(seconds: 2));
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => AuthScreen()));
+        context, MaterialPageRoute(builder: (context) => ChoiceScreen()));
   }
 
   Widget build(BuildContext context) {
