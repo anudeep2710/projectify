@@ -25,7 +25,7 @@ class LoginField extends StatelessWidget {
         onSaved:onSaved ,
         validator:textchecker ,
         decoration: InputDecoration(
-          icon:icon,
+          prefixIcon:icon,
           contentPadding: const EdgeInsets.all(27),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(

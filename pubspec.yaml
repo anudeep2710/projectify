@@ -75,6 +75,9 @@ flutter:
     - assets/animations/laptop.json
     - assets/animations/notepad.json
     - assets/animations/project.json
+    - assets/images/user.png
+    - assets/images/git.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

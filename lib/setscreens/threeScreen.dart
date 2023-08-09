@@ -7,6 +7,8 @@ class Screenthree extends StatelessWidget{
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+                    SizedBox(height: 70,),
+
           Text('Start your projects',style: TextStyle(fontSize: 20)),
           Expanded(
             child: Lottie.asset(

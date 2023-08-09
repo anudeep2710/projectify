@@ -8,7 +8,11 @@ class Screenone extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Manage your tasks with projectify',style: TextStyle(fontSize: 20),),
+          SizedBox(height: 70,),
+          const Text(
+            'Manage your tasks with projectify',
+            style: TextStyle(fontSize: 20),
+          ),
           Expanded(
             child: Lottie.asset(
               'assets/animations/notepad.json',
