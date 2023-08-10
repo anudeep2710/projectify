@@ -19,7 +19,7 @@ class _AuthScreenState extends State<AuthScreen> {
   var _enteredEmail = '';
   var _enteredPassword = '';
 
- final bool _isPasswordVisible = false;
+  final bool _isPasswordVisible = false;
 
   void _submitForm() {
     final isValid = _form.currentState!.validate();
@@ -31,11 +31,10 @@ class _AuthScreenState extends State<AuthScreen> {
     if (_isLogin) {
       print(
           'Logging in with email: $_enteredEmail, password: $_enteredPassword');
-          Navigator.push(
+      Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => TutorialScreen()),
       );
-          
     } else {
       print(
           'Signing up with email: $_enteredEmail, password: $_enteredPassword');
@@ -61,15 +60,13 @@ class _AuthScreenState extends State<AuthScreen> {
                     width: 200,
                     child: const Text(
                       'Login page',
-                      style: TextStyle(fontSize:40),
-                      
+                      style: TextStyle(fontSize: 40),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   GlassmorphicContainer(
-                    
                       width: 400,
-                      height: 420,
+                      height: 450,
                       borderRadius: 20,
                       blur: 20,
                       alignment: Alignment.bottomCenter,
@@ -95,12 +92,16 @@ class _AuthScreenState extends State<AuthScreen> {
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Image.asset('assets/images/user.png',height: 60,width: 60,color: bgColor,),
+                                Image.asset(
+                                  'assets/images/user.png',
+                                  height: 60,
+                                  width: 60,
+                                  color: Colors.white,
+                                ),
                                 LoginField(
                                   obscureText: false,
                                   hintText: 'Email',
-                                                                  icon: Icon(Icons.email),
-      
+                                  icon: Icon(Icons.email),
                                   textchecker: (value) {
                                     if (value == null ||
                                         value.trim().isEmpty ||
@@ -134,8 +135,8 @@ class _AuthScreenState extends State<AuthScreen> {
                                   onPressed: _submitForm,
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: bgColor,
-                                    padding:
-                                        const EdgeInsets.symmetric(vertical: 15),
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 15),
                                   ),
                                   child: Text(_isLogin ? 'Login' : 'Signup'),
                                 ),
@@ -163,7 +164,8 @@ class _AuthScreenState extends State<AuthScreen> {
                                       onTap: () {},
                                       splashColor: Colors.white10,
                                       child: SquareTile(
-                                          imagePath: 'assets/images/google.png'),
+                                          imagePath:
+                                              'assets/images/google.png'),
                                     ),
                                     SizedBox(
                                       width: 10,
@@ -175,13 +177,14 @@ class _AuthScreenState extends State<AuthScreen> {
                                           imagePath:
                                               'assets/images/microsoft.png'),
                                     ),
-                                    SizedBox(width: 10,),
-                                     InkWell(
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    InkWell(
                                       onTap: () {},
                                       splashColor: Colors.white10,
                                       child: SquareTile(
-                                          imagePath:
-                                              'assets/images/git.png'),
+                                          imagePath: 'assets/images/git.png'),
                                     )
                                   ],
                                 ),

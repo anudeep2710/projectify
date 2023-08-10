@@ -23,7 +23,7 @@ class _LogoScreenState extends State<LogoScreen> {
     await Future.delayed(const Duration(seconds: 2));
     // ignore: use_build_context_synchronously
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) =>AuthScreen()));
+        context, MaterialPageRoute(builder: (context) =>TutorialScreen()));
   }
 
   Widget build(BuildContext context) {

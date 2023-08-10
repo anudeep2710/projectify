@@ -3,6 +3,8 @@ import 'package:projectify/setscreens/oneScreen.dart';
 import 'package:projectify/setscreens/threeScreen.dart';
 import 'package:projectify/setscreens/twoScreen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:projectify/page/mainboard.dart';
+
 class TutorialScreen extends StatefulWidget {
   TutorialScreen({Key? key}) : super(key: key);
 
@@ -12,6 +14,20 @@ class TutorialScreen extends StatefulWidget {
 
 class _TutorialScreenState extends State<TutorialScreen> {
   PageController _pageController = PageController();
+
+  void _navigateToNextPage() {
+    if (_pageController.page!.toInt() < 2) {
+      _pageController.nextPage(
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeIn,
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => DashboardScreen()),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +74,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: GestureDetector(
-                    onTap: () {
-                      if (_pageController.page!.toInt() < 2) {
-                        _pageController.nextPage(
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.easeIn,
-                        );
-                      }
-                    },
+                    onTap: _navigateToNextPage,
                     child: const Text('Next'),
                   ),
                 ),
