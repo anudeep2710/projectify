@@ -3,7 +3,9 @@ import 'package:projectify/setscreens/oneScreen.dart';
 import 'package:projectify/setscreens/threeScreen.dart';
 import 'package:projectify/setscreens/twoScreen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:projectify/page/mainboard.dart';
+import 'package:projectify/page/components/ulmain.dart';
+
+
 
 class TutorialScreen extends StatefulWidget {
   TutorialScreen({Key? key}) : super(key: key);
@@ -24,7 +26,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
     } else {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => DashboardScreen()),
+        MaterialPageRoute(builder: (context) =>MainScreen() ),
       );
     }
   }

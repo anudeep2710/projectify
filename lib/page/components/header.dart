@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:projectify/constraints.dart';
 import 'package:projectify/responsive.dart';
+
 class Header extends StatelessWidget {
   const Header({
     Key? key,
@@ -14,9 +15,7 @@ class Header extends StatelessWidget {
         if (!Responsive.isDesktop(context))
           IconButton(
             icon: Icon(Icons.menu),
-            onPressed: () {
-              
-            },
+            onPressed: () {},
           ),
         if (!Responsive.isMobile(context))
           Text(
@@ -54,10 +53,10 @@ class ProfileCard extends StatelessWidget {
         children: [
           Image.asset(
             "assets/images/user.png",
-            height: 38,
+            height: 38,color: Colors.white,
           ),
           if (!Responsive.isMobile(context))
-            Padding(
+            const Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Sa"),
@@ -81,9 +80,13 @@ class SearchField extends StatelessWidget {
         hintText: "Search",
         fillColor: secondaryColor,
         filled: true,
-        border: OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderSide: BorderSide.none,
           borderRadius: const BorderRadius.all(Radius.circular(10)),
+        ),
+        contentPadding: EdgeInsets.symmetric(
+          vertical: 16.0, // Increase this value to make the widget thicker
+          horizontal: defaultPadding,
         ),
         suffixIcon: InkWell(
           onTap: () {},
@@ -94,7 +97,7 @@ class SearchField extends StatelessWidget {
               color: primaryColor,
               borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
-            child:Image.asset('assets/images/search.png') ,
+            child: Image.asset('assets/images/searchicon.png',height: 20,)
           ),
         ),
       ),

@@ -77,7 +77,13 @@ flutter:
     - assets/animations/project.json
     - assets/images/user.png
     - assets/images/git.png
-    - assets/images/search.png
+    - assets/images/searchicon.png
+    - assets/icons/menu_task.svg
+    - assets/icons/menu_setting.svg
+    - assets/icons/menu_doc.svg
+    - assets/icons/menu_bell.svg
+    - assets/icons/menu_dashboard.svg
+    - assets/icons/menu_profile.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
