@@ -15,4 +15,7 @@
 
 ## Frame work 
 flutter and dart
+## supporting platforms
+mobile and desktop
+
 
