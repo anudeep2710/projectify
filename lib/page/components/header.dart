@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:projectify/constraints.dart';
 import 'package:projectify/responsive.dart';
 
@@ -78,7 +77,7 @@ class SearchField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: "Search",
-        fillColor: secondaryColor,
+        fillColor: bgColor,
         filled: true,
         border: const OutlineInputBorder(
           borderSide: BorderSide.none,

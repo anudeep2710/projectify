@@ -54,12 +54,11 @@ class SideMenu extends StatelessWidget {
 
 class DrawerListTile extends StatelessWidget {
   const DrawerListTile({
-    Key? key,
-    // For selecting those three line once press "Command+D"
+    super.key,
     required this.title,
     required this.svgSrc,
     required this.press,
-  }) : super(key: key);
+  }) ;
 
   final String title, svgSrc;
   final VoidCallback press;

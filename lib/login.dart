@@ -168,7 +168,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                               'assets/images/google.png'),
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 17,
                                     ),
                                     InkWell(
                                       onTap: () {},
@@ -178,7 +178,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                               'assets/images/microsoft.png'),
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 17,
                                     ),
                                     InkWell(
                                       onTap: () {},
