@@ -1,0 +1,18 @@
+[
+    {
+      "rows": [
+        {
+          "columns": [
+            {"hintText": "Column 1"},
+            {"hintText": "Column 2"}
+          ]
+        },
+        {
+          "columns": [
+            {"hintText": "Column 3"},
+            {"hintText": "Column 4"}
+          ]
+        }
+      ]
+    }
+  ]

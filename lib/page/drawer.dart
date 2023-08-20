@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:projectify/page/components/ulmain.dart';
+import 'package:projectify/page/mainboard.dart';
+import 'package:projectify/page/settings.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -17,7 +20,13 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Dashboard",
             svgSrc: "assets/icons/menu_dashboard.svg",
-            press: () {},
+            press: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MainScreen()
+                ));
+
+            },
           ),
 
           DrawerListTile(
@@ -44,7 +53,15 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Settings",
             svgSrc: "assets/icons/menu_setting.svg",
-            press: () {},
+            press: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SettingsScreen()),
+              );
+
+
+
+            },
           ),
         ],
       ),

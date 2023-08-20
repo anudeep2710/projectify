@@ -23,10 +23,8 @@ class MainScreen extends StatelessWidget {
               flex: 5,
               child: DashboardScreen(),
             ),
-              if (Responsive.isDesktop(context))
-              Expanded(
-                child: tasks_screen(),
-              ),
+            
+           
           
 
 
@@ -34,6 +32,6 @@ class MainScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ); 
   }
 }
